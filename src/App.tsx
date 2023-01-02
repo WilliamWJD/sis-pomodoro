@@ -1,19 +1,18 @@
 import { ThemeProvider } from "styled-components";
+import { BrowserRouter } from "react-router-dom";
 
 import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/global";
 
-import { Button } from "./components/Button";
+import { Router } from "./Router";
 
 export function App() {
     return (
         <ThemeProvider theme={defaultTheme}>
             <GlobalStyle />
-            <h1>Sis-Pomodoro</h1>
-            <Button />
-            <Button />
-            <Button />
-            <Button />
+            <BrowserRouter>
+                <Router />
+            </BrowserRouter>
         </ThemeProvider>
     );
 }
